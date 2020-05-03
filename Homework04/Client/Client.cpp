@@ -92,6 +92,14 @@ int main(int argc, char* argv[])
 				send(client, (char*)(messagePtr), sizeof(*messagePtr), 0);
 				break;
 			}
+			case 3: {
+				messagePtr->type = 3;
+				ret = sizeof(*messagePtr);
+				send(client, itoa(ret, sizeMsg, 10), sizeof(ret), 0);
+				send(client, (char*)(messagePtr), sizeof(*messagePtr), 0);
+				closesocket(client);
+				break;
+			}
 		}
 
 		//Get length of message from server
@@ -109,13 +117,13 @@ int main(int argc, char* argv[])
 		} while (length > 0);//get message until number of byte of message return zero
 		printf("%s", result);
 	} while (true);
-		
-	closesocket(client);
+
 	return 0;
 }
 
 void menu() {
 	printf("\n1. Login\n");
 	printf("2. Logout\n");
-	printf("Press key 1 to Login, 2 to Logout\n");
+	printf("3. Exit\n");
+	printf("Press key 1 to Login, 2 to Logout, 3 to Exit\n");
 }

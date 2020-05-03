@@ -10,6 +10,8 @@
 #include <WS2tcpip.h>
 #include <process.h>
 #include <string>
+#include <list>
+#include <iostream>
 
 #define SERVER_ADDRF "127.0.0.1"
 #define BUFF_SIZE 2048
@@ -35,7 +37,11 @@ struct Account {
 	int Status;
 };
 
+//accounts contain account read in file acounts.txt
 struct Account accounts[SIZE];
+
+//session contain account is loged in
+list<const char*> session;
 int numUsers;
 unsigned int __stdcall  ServClient(void *data);
 
@@ -44,6 +50,8 @@ bool isActived(char *username, char *accounts);
 bool checkPassword(char *username, char *password, char *accounts);
 void lockAccount(char *username, char *accounts);
 void listAccount(char *accounts, int *numUser);
+bool checkLogedIn(char *username, list<const char*> session);
+
 
 int main(int argc, char* argv[])
 {
@@ -98,7 +106,7 @@ int main(int argc, char* argv[])
 		connSock = accept(listenSock, (sockaddr *)& clientAddr, &clientAddrLen);
 		_beginthreadex(0, 0, ServClient, (void*)&connSock, 0, NULL);
 	}
-	return 0;
+
 	closesocket(listenSock);
 
 	//Terminate Winsock
@@ -112,7 +120,6 @@ unsigned int __stdcall ServClient(void *data)
 	SOCKET	*client = (SOCKET*)data;
 	SOCKET Client = *client;
 	printf("\nClient: [%d] : Connected\n", GetCurrentThreadId());
-
 	//initiate parameter
 	char buff[BUFF_SIZE], len[BUFF_SIZE], receive[BUFF_SIZE], replyMessage[BUFF_SIZE], sizeMsg[BUFF_SIZE];
 	int ret, length;
@@ -124,11 +131,19 @@ unsigned int __stdcall ServClient(void *data)
 
 	while (1) {
 		ret = recv(Client, len, BUFF_SIZE, 0);
+		if (ret == SOCKET_ERROR) {
+			printf("\nClient: [%d] : Disconnected\n", GetCurrentThreadId());
+			return 0;
+		}
 		length = atoi(len);
 		buff[0] = 0;
 		do {
 			//Receive message from client
 			ret = recv(Client, receive, BUFF_SIZE, 0);
+			if (ret == SOCKET_ERROR) {
+				printf("\nClient: [%d] : Disconnected\n", GetCurrentThreadId());
+				return 0;
+			}
 			if (strlen(receive) > 0) {
 				receive[ret] = 0;
 				strcat(buff, receive);
@@ -140,6 +155,9 @@ unsigned int __stdcall ServClient(void *data)
 		strcpy(receive, buff);
 		receiveMessage = (struct Message*)receive;
 		int typeMessage = receiveMessage->type;
+		
+		//if socket is closed, message don't send to client
+		bool isSocketClosed = false;
 		switch (typeMessage) {
 			case LOGIN: {
 				if (checkUsername(receiveMessage->username, (char*)accounts)) {
@@ -148,25 +166,31 @@ unsigned int __stdcall ServClient(void *data)
 						strcpy(replyMessage, "Server: Account is locked\n");
 						break;
 					}
+					else if (checkLogedIn(receiveMessage->username, session)) {
+						printf("Server: This Account is loged in another client\n");
+						strcpy(replyMessage, "Server: This Account is loged in another client\n");
+						break;
+					}
 					else if (checkPassword(receiveMessage->username, receiveMessage->password, (char*)accounts)) {
 						if (!isLogin) {
 							printf("Server: Login success\n");
 							strcpy(replyMessage, "Server: Login success\n");
 							isLogin = true;
+							session.push_back(receiveMessage->username);
 							printf("Hello %s\n", receiveMessage->username);
 							break;
 						}
 						else {
-							printf("Server: Account is already login");
-							strcpy(replyMessage, "Server: Account is already login");
+							printf("Server: Client is already login\n");
+							strcpy(replyMessage, "Server: Client is already login\n");
 							break;
 						}
 					}
 					else {
 						incorrectCounter++;
 						if (incorrectCounter >= 3) {
-							printf("Server:This account is locked because try to access into server with incorrect password three times");
-							strcpy(replyMessage, "Server: This account is locked because try to access into server with incorrect password three times");
+							printf("Server:This account is locked because try to access into server with incorrect password three times\n");
+							strcpy(replyMessage, "Server: This account is locked because try to access into server with incorrect password three times\n");
 							lockAccount(receiveMessage->username, (char *)accounts);
 							listAccount((char *)accounts, &numUsers);
 							break;
@@ -189,6 +213,7 @@ unsigned int __stdcall ServClient(void *data)
 					printf("Server: Logout!\n");
 					strcpy(replyMessage, "Server: Logout!\n");
 					isLogin = false;
+					session.remove(receiveMessage->username);
 					break;
 				}
 				else {
@@ -197,13 +222,21 @@ unsigned int __stdcall ServClient(void *data)
 					break;
 				}
 			}
+			default: {
+				isSocketClosed = true;
+				shutdown(Client, SD_BOTH);
+				printf("\nClient: [%d] : Disconnected\n", GetCurrentThreadId());
+				session.remove(receiveMessage->username);
+				return 0;
+			}
 		}
-
-		ret = strlen(replyMessage);
-		//send length of message to client
-		ret = send(Client, itoa(ret, sizeMsg, 10), ret, 0);
-		//send message to client
-		ret = send(Client, replyMessage, strlen(replyMessage), 0);
+		if (!isSocketClosed) {
+			ret = strlen(replyMessage);
+			//send length of message to client
+			ret = send(Client, itoa(ret, sizeMsg, 10), ret, 0);
+			//send message to client
+			ret = send(Client, replyMessage, strlen(replyMessage), 0);
+		}
 	}
 	return 0;
 }
@@ -281,4 +314,13 @@ void listAccount(char *accounts, int *numUser) {
 		counter++;
 	}
 	*numUser = counter;
+}
+
+bool checkLogedIn(char *username, list<const char*> session) {
+	for (list<const char *>::iterator it = session.begin(); it != session.end(); ++it) {
+		if (strcmp(username, *it) == 0) {
+			return true;
+		}
+	}
+	return false;
 }

@@ -13,7 +13,9 @@ e:\laptrinhmang\project\homework04\client\client.cpp(84): warning C4996: 'itoa':
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
 e:\laptrinhmang\project\homework04\client\client.cpp(91): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
-e:\laptrinhmang\project\homework04\client\client.cpp(106): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\laptrinhmang\project\homework04\client\client.cpp(98): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
+e:\laptrinhmang\project\homework04\client\client.cpp(114): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
 e:\laptrinhmang\project\homework04\client\client.cpp(59): warning C4101: 'buff': unreferenced local variable
   Client.vcxproj -> E:\LapTrinhMang\Project\Homework04\Debug\Client.exe
