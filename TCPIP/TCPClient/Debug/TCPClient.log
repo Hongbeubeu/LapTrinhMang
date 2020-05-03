@@ -1,0 +1,7 @@
+﻿  TCPClient.cpp
+e:\laptrinhmang\project\tcpip\tcpclient\tcpclient.cpp(60): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
+e:\laptrinhmang\project\tcpip\tcpclient\tcpclient.cpp(88): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+  TCPClient.vcxproj -> E:\LapTrinhMang\Project\TCPIP\Debug\TCPClient.exe
+  TCPClient.vcxproj -> E:\LapTrinhMang\Project\TCPIP\Debug\TCPClient.pdb (Full PDB)
