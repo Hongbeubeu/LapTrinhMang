@@ -1,0 +1,41 @@
+﻿  Task2_Server.cpp
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(7): warning C4603: 'FD_SETSIZE': macro is not defined or definition is different after precompiled header use
+  e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(7): note: Add macro to precompiled header instead of defining here
+  e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(10): note: use of precompiled header
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(157): warning C4778: 'printf' : unterminated format string '%'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(157): warning C4474: 'printf' : too many arguments passed for format string
+  e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(157): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(168): warning C4778: 'printf' : unterminated format string '%'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(168): warning C4474: 'printf' : too many arguments passed for format string
+  e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(168): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(210): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(213): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(214): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(218): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(220): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(222): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(223): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(224): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(267): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(273): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(275): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(277): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(280): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(281): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework06\task2_server\task2_server.cpp(241): warning C4101: 'sockaddr_ip': unreferenced local variable
+  Task2_Server.vcxproj -> E:\LapTrinhMang\Project\Homework06\Debug\Task2_Server.exe
+  Task2_Server.vcxproj -> E:\LapTrinhMang\Project\Homework06\Debug\Task2_Server.pdb (Full PDB)

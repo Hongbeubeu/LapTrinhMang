@@ -1,0 +1,23 @@
+﻿  stdafx.cpp
+  Task1_Client.cpp
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(72): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(78): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(79): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(82): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(83): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(86): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(93): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(100): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(116): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+e:\laptrinhmang\project\homework05\task1_client\task1_client.cpp(61): warning C4101: 'buff': unreferenced local variable
+  Task1_Client.vcxproj -> E:\LapTrinhMang\Project\homework05\Debug\Task1_Client.exe
+  Task1_Client.vcxproj -> E:\LapTrinhMang\Project\homework05\Debug\Task1_Client.pdb (Full PDB)

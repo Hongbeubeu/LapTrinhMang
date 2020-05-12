@@ -1,0 +1,11 @@
+﻿  Task1_Client.cpp
+e:\laptrinhmang\project\homework06\task1_client\task1_client.cpp(80): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+e:\laptrinhmang\project\homework06\task1_client\task1_client.cpp(84): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+e:\laptrinhmang\project\homework06\task1_client\task1_client.cpp(62): warning C4101: 'len': unreferenced local variable
+e:\laptrinhmang\project\homework06\task1_client\task1_client.cpp(62): warning C4101: 'receive': unreferenced local variable
+e:\laptrinhmang\project\homework06\task1_client\task1_client.cpp(62): warning C4101: 'sizeMsg': unreferenced local variable
+e:\laptrinhmang\project\homework06\task1_client\task1_client.cpp(60): warning C4101: 'buff': unreferenced local variable
+  Task1_Client.vcxproj -> E:\LapTrinhMang\Project\Homework06\Debug\Task1_Client.exe
+  Task1_Client.vcxproj -> E:\LapTrinhMang\Project\Homework06\Debug\Task1_Client.pdb (Full PDB)
